@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>RISE</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>RISE</h1>
+        <h2 style="text-align: center; color: var(--accent-color)">
+            Resilience Inspiration Support Empowerment
+        </h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <h2>Welcome to RISE</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                interdum erat at quam fermentum, at posuere turpis suscipit.
+            </p>
+            <button class="custom-button" ;>Learn More</button>
+        </section>
+
+        <section id="mission">
+            <h2>Our Mission</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                euismod, nunc at convallis tincidunt, massa urna facilisis quam, sit
+                amet hendrerit justo leo a metus.
+            </p>
+        </section>
+
+        <section id="resources">
+            <h2>Resources</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Article 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="custom-button">Read More</button>
+                </div>
+                <div class="card">
+                    <h3>Article 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="custom-button">Read More</button>
+                </div>
+                <div class="card">
+                    <h3>Article 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="custom-button">Read More</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="support">
+            <h2>Get Support</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message, please don't send over 10 messages per day"></textarea>
+
+                <button class="custom-button" type="submit" id="submit">Submit</button>
+            </form>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script>
+                let idiotCount = 0;
+                (function () {
+                    emailjs.init({
+                        publicKey: "axsmxl9NX8xgT-6N_",
+                    });
+                })();
+                let templateParams;
+                const sub = document.getElementById("submit");
+                sub.addEventListener("click", function () {
+                    console.log("test");
+                    //WHY IS THIS NOT WORKING AUEHGSEOIGUHSGUVGIKEHGAe
+                    templateParams = {
+                        from_name: document.getElementById("name").value,
+                        message: document.getElementById("message").value,
+                    };
+
+                    emailjs
+                        .send("service_z0kmh7c", "template_zgdp175", templateParams)
+                        .then(
+                            function (response) {
+                                console.log("SUCCESS!", response.status, response.text);
+                            },
+                            function (error) {
+                                console.log("FAILED...", error);
+                            }
+                        );
+                    alert("Message Sent!");
+                    idiotCount++;
+                    if (idiotCount > 9) {
+                        alert("You do realize that I can track your IP Address, right?");
+                        alert("Since you spammed the email, I will now send a horde of elephants to your house.");
+                        alert("These elephants will trample you and you will die.");
+                        window.location.href="read1.html";
+                    }
+                    event.preventDefault();
+                });
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RISE. All rights reserved.</p>
+        <div class="social-icons">
+            <h2 style="text-align: center; color: var(--accent-color)">
+                Follow Us
+            </h2>
+            <br />
+            <a href="https://www.facebook.com/"><img src="icon-facebook.png" alt="Facebook" /></a>
+            <a href="https://x.com/"><img src="icon-twitter.png" alt="Twitter" /></a>
+            <a href="https://www.instagram.com/"><img src="icon-instagram.png" alt="Instagram" /></a>
+        </div>
+    </footer>
+</body>
+
+</html>
