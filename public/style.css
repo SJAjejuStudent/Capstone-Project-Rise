@@ -7,10 +7,10 @@
 
 /* Twilight Theme Colors */
 :root {
-    --primary-color: #000000;    /* Deep Purple */
-    --secondary-color: #00b23e;  /* Lighter Purple */
-    --accent-color: #006300;     /* Twilight Orange */
-    --background-color: #ffffff; /* Dark Blue */
+    --primary-color: #4b2e83;    /* Deep Purple */
+    --secondary-color: #6a4f9b;  /* Lighter Purple */
+    --accent-color: #ff6f61;     /* Twilight Orange */
+    --background-color: #1e1e2f; /* Dark Blue */
     --text-color: #ffffff;       /* White */
 }
 
