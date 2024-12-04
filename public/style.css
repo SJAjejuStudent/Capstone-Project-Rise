@@ -7,11 +7,11 @@
 
 /* Twilight Theme Colors */
 :root {
-    --primary-color: #4b2e83;    /* Deep Purple */
-    --secondary-color: #6a4f9b;  /* Lighter Purple */
-    --accent-color: #ff6f61;     /* Twilight Orange */
-    --background-color: #1e1e2f; /* Dark Blue */
-    --text-color: #ffffff;       /* White */
+    --primary-color: #ffffff;    /* Deep Purple */
+    --secondary-color: #9b974f;  /* Lighter Purple */
+    --accent-color: #ffa946;     /* Twilight Orange */
+    --background-color: #ffffff; /* Dark Blue */
+    --text-color: #515050;       /* White */
 }
 
 /* Base Styles */
@@ -143,7 +143,7 @@ form input, form textarea {
     padding: 12px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
-    background: #2a2a3b;
+    background: #fdc968;
     color: var(--text-color);
 }
 
