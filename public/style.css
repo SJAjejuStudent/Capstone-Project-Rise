@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 
-/* Twilight Theme Colors */
+/* Comfy Theme Colors */
 :root {
-    --primary-color: #ffffff;    /* Deep Purple */
-    --secondary-color: #9b974f;  /* Lighter Purple */
-    --accent-color: #ffa946;     /* Twilight Orange */
-    --background-color: #ffffff; /* Dark Blue */
-    --text-color: #515050;       /* White */
+    --primary-color: #ffffff;    /* White again */
+    --secondary-color: #9b974f;  /* Vomit */
+    --accent-color: #ffa946;     /* Orange */
+    --background-color: #ffffff; /* White */
+    --text-color: #515050;       /* Dark Gray */
 }
 
 /* Base Styles */
