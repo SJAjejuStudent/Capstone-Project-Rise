@@ -29,8 +29,7 @@
         <section id="welcome">
             <h2>Welcome to RISE</h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-                interdum erat at quam fermentum, at posuere turpis suscipit.
+                We are a a capstone group.
             </p>
             <button class="custom-button" ;>Learn More</button>
         </section>
@@ -81,7 +80,7 @@
             </form>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
             <script>
-                let idiotCount = 0;
+                // this is a public key so it *should* be fine to put here right?
                 (function () {
                     emailjs.init({
                         publicKey: "axsmxl9NX8xgT-6N_",
@@ -93,7 +92,7 @@
                     console.log("test");
                     //WHY IS THIS NOT WORKING AUEHGSEOIGUHSGUVGIKEHGAe
                     templateParams = {
-                        from_name: document.getElementById("name").value,
+                        from_name: document.getElementById("name").value + " at " + document.getElementById("email").value,
                         message: document.getElementById("message").value,
                     };
 
@@ -108,13 +107,7 @@
                             }
                         );
                     alert("Message Sent!");
-                    idiotCount++;
-                    if (idiotCount > 9) {
-                        alert("You do realize that I can track your IP Address, right?");
-                        alert("Since you spammed the email, I will now send a horde of elephants to your house.");
-                        alert("These elephants will trample you and you will die.");
-                        window.location.href="read1.html";
-                    }
+                    // I have no idea what this does but it fixed everything
                     event.preventDefault();
                 });
             </script>
