@@ -9,7 +9,10 @@ function darkMode() {
     } else {
         currentLink = lightLink;
     }
+}
+
+document.addEventListener("click", function () {
     Array.from(links).forEach(link => {
         link.href = currentLink;
     });
-}
+})
