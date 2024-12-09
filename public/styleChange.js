@@ -1,18 +1,21 @@
 let darkLink = "dark.css";
 let lightLink = "style.css";
-let currentLink = "style.css";
 var links = document.getElementsByClassName('styles');
 
 function darkMode() {
-    if (currentLink === "style.css") {
+    if (window.name === "style.css" || window.name == null) {
         currentLink = darkLink;
-    } else {
+    } else if (window.name === "dark.css") {
         currentLink = lightLink;
     }
-}
-
-document.addEventListener("click", function () {
+    window.name = currentLink;
     Array.from(links).forEach(link => {
         link.href = currentLink;
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    Array.from(links).forEach(link => {
+        link.href = window.name;
     });
 })
