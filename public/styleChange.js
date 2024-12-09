@@ -15,6 +15,11 @@ function darkMode() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    if (window.name = "") {
+        Array.from(links).forEach(link => {
+            link.href = "style.css";
+        });
+    }
     Array.from(links).forEach(link => {
         link.href = window.name;
     });
